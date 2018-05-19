@@ -9,6 +9,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
     /**
      * The attributes that are mass assignable.
      *
@@ -27,6 +28,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
+
     public function role(){
         return $this->belongsTo('App\Role');
     }
@@ -34,4 +37,6 @@ class User extends Authenticatable
     public function photo(){
         return $this->belongsTo('App\Photo');
     }
+
+
 }
