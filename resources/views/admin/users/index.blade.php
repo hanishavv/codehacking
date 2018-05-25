@@ -4,6 +4,12 @@
 
     <h1>User</h1>
 
+
+
+        @if(Session::has('deleted_user'))
+            <h6 class="bg-danger">{{Session('deleted_user')}}</h6>
+            @endif
+
     <table class="table table-bordered">
         <thead>
         <tr>

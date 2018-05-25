@@ -43,12 +43,20 @@
                 {!! Form::label('photo_id','Upload:') !!}
                 {!! Form::file('photo_id') !!}
             </div>
-            <div class="form-group">
+            <div class="form-group col-sm-6">
 
-                {!! Form::submit('Create User',['class'=>'btn btn-primary']) !!}
+                {!! Form::submit('Update User',['class'=>'btn btn-primary']) !!}
             </div>
 
             {!! Form::close() !!}
+
+            {!! Form::open(['method'=>'DELETE','action'=>['AdminUsersController@destroy',$user->id]]) !!}
+            <div class="form-group col-sm-6 ">
+                {!! form::submit('Delete User',['class'=>'btn btn-danger pull-right']) !!}
+
+            </div>
+
+            {!! form::close() !!}
 
         </div>
     </div>
